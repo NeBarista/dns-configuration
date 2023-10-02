@@ -1,4 +1,4 @@
-Ansible Role: DNS Configuration
+# Ansible Role: DNS Configuration
 
 This Ansible role is designed to automate the configuration of DNS (Domain Name System) settings on your target hosts. DNS is a crucial component of network infrastructure responsible for resolving domain names to IP addresses and vice versa.
 Requirements
@@ -8,7 +8,7 @@ Before using this role, ensure you have the following prerequisites:
     Ansible is installed on your control machine.
     Access to the target hosts with the necessary privileges to modify DNS configuration files.
 
-Role Variables
+## Role Variables
 
 This role may require specific variables to be set based on your DNS configuration needs. These variables can be customized in your Ansible playbook to match your DNS server's configuration. Some common variables you might need to configure include:
 
@@ -22,7 +22,7 @@ Dependencies
 This role does not have any dependencies on other Ansible roles.
 
 
-Example Playbook
+## Example Playbook
 
 Here's an example playbook that demonstrates how to use this role:
 
@@ -39,6 +39,6 @@ Here's an example playbook that demonstrates how to use this role:
     - dns_configuration
 ```
 
-License
+## License
 
 This Ansible role is licensed under the MIT License. Feel free to modify and distribute it as needed for your projects.
