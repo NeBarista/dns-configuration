@@ -1,0 +1,8 @@
+---
+- name: Configure DNS servers in systemd-resolved
+  lineinfile:
+    path: /etc/systemd/resolved.conf
+    regexp: '^DNS='
+    line: "DNS={{ dns_servers | join(' ') }}"
+    create: yes
+  notify: Restart systemd-resolved
