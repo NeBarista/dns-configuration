@@ -25,6 +25,7 @@ This role does not have any dependencies on other Ansible roles.
 Example Playbook
 
 Here's an example playbook that demonstrates how to use this role:
+
 ---
 - name: Configure DNS servers
   hosts: all
@@ -35,6 +36,7 @@ Here's an example playbook that demonstrates how to use this role:
       - 78.88.8.8
   roles:
     - dns_configuration
+
 
 License
 
