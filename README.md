@@ -23,25 +23,17 @@ This role does not have any dependencies on other Ansible roles.
 Example Playbook
 
 Here's an example playbook that demonstrates how to use this role:
-
-yaml
-
-- name: Configure DNS
-  hosts: your_target_hosts
-  become: yes  # If privilege escalation is required (sudo)
+---
+- name: Configure DNS servers
+  hosts: all
+  become: yes
+  vars:
+    dns_servers:
+      - 8.8.8.8
+      - 78.88.8.8
   roles:
-    - name: Configure DNS
-      role: dns-configuration
-      vars:
-        dns_server: 192.168.1.100
-        dns_search_domains:
-          - example.com
-          - subdomain.example.com
-        dns_nameservers:
-          - 8.8.8.8
-          - 8.8.4.4
+    - dns_configuration
 
-In this example, replace your_target_hosts with the appropriate host group or host(s) where you want to configure DNS. Customize the vars section with your specific DNS configuration settings.
 License
 
 This Ansible role is licensed under the MIT License. Feel free to modify and distribute it as needed for your projects.
