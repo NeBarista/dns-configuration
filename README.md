@@ -20,6 +20,8 @@ You can adjust these variables in your playbook's vars section.
 Dependencies
 
 This role does not have any dependencies on other Ansible roles.
+
+
 Example Playbook
 
 Here's an example playbook that demonstrates how to use this role:
