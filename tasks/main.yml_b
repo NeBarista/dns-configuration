@@ -1,0 +1,7 @@
+---
+- name: Set DNS servers
+  lineinfile:
+    path: /etc/resolv.conf
+    line: "nameserver {{ item }}"
+    state: present
+  loop: "{{ dns_servers }}"
